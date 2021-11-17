@@ -123,6 +123,7 @@
   position: relative;
   -webkit-transition: var(--transition);
   transition: var(--transition);
+  text-align: center;
 }
 li a  {
   
@@ -167,6 +168,11 @@ ul{
   -webkit-transition: var(--transition);
   transition: var(--transition);
   margin-top: 50px;
+}
+a:hover{
+  cursor: pointer;
+    color: var(--green);
+    transform: translateY(-3px);
 }
 .a:hover,a:active {
   background-color: var(--green-tint);

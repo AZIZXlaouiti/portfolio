@@ -1,6 +1,6 @@
 import './App.scss';
 import { icons } from './assets/icons';
-const one = <h1>Hi, my name is</h1>;
+const one = <h1>Hi, my name is </h1>;
 const two = <h2 className="big-heading">Mohamed Aziz Laouiti.</h2>;
 const three = <h3 className="big-heading"></h3>;
 const four = (
@@ -45,8 +45,8 @@ function App() {
           <ul>
             <li><a>{icons[0].svg}</a></li>
             <li><a>{icons[1].svg}</a></li>
-            <li><a>{icons[2].svg}</a></li>
             <li><a>{icons[3].svg}</a></li>
+            <li><a>{icons[2].svg}</a></li>
 
           </ul>
         </div>
