@@ -169,7 +169,7 @@ ul{
   transition: var(--transition);
   margin-top: 50px;
 }
-a:hover{
+li a:hover{
   cursor: pointer;
     color: var(--green);
     transform: translateY(-3px);

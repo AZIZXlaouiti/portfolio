@@ -47,7 +47,8 @@ function App() {
             <li><a>{icons[1].svg}</a></li>
             <li><a>{icons[3].svg}</a></li>
             <li><a>{icons[2].svg}</a></li>
-
+            <li><a>{icons[5].svg}</a></li>
+            
           </ul>
         </div>
     </>
