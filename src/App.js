@@ -15,9 +15,7 @@ const five = (
       as javascript , ruby and python, 
       with a constant drive for self-development, and learning
       new technologies and languages
-      <a href="https://upstatement.com/" target="_blank" rel="noreferrer">
-        Upstatement
-      </a>
+    
       .
     </p>
   </>
@@ -48,7 +46,7 @@ function App() {
         </div>
         <Bio/>
         <div className="container">
-          <ul>
+          <ul className="ul">
             <li><a>{icons[0].svg}</a></li>
             <li><a>{icons[1].svg}</a></li>
             <li><a>{icons[3].svg}</a></li>
