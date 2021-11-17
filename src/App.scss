@@ -1,0 +1,167 @@
+  /* flex-direction: column;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 0; */
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+  :root {
+    --dark-navy: #020c1b;
+    --navy: #f2f2f296;
+    --light-navy: #112240;
+    --lightest-navy: #233554;
+    --navy-shadow: rgba(2,12,27,0.7);
+    --dark-slate: #495670;
+    --slate: #8892b0;
+    /* --light-slate: #a8b2d1; */
+    /* --lightest-slate: #ccd6f6; */
+    --white: #e6f1ff;
+    --green: #ea0d0d;
+    --green-tint: rgb(255 100 100 / 10%);
+    --pink: #f57dff;
+    --blue: #57cbff;
+    --font-sans: 'Calibre';
+    --font-mono: 'SF Mono','Fira Code','Fira Mono','Roboto Mono',monospace;
+    --fz-xxs: 12px;
+    --fz-xs: 13px;
+    --fz-sm: 14px;
+    --fz-md: 16px;
+    --fz-lg: 18px;
+    --fz-xl: 20px;
+    --fz-xxl: 22px;
+    --fz-heading: 32px;
+    --border-radius: 4px;
+    --nav-height: 100px;
+    --nav-scroll-height: 70px;
+    --tab-height: 42px;
+    --tab-width: 120px;
+    --easing: cubic-bezier(0.645,0.045,0.355,1);
+    --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    --hamburger-width: 30px;
+    --ham-before: top 0.1s ease-in 0.25s,opacity 0.1s ease-in;
+    --ham-before-active: top 0.1s ease-out,opacity 0.1s ease-out 0.12s;
+    --ham-after: bottom 0.1s ease-in 0.25s,transform 0.22s cubic-bezier(0.55,0.055,0.675,0.19);
+    --ham-after-active: bottom 0.1s ease-out,transform 0.22s cubic-bezier(0.215,0.61,0.355,1) 0.12s;
+}
+  @media (max-width: 480px) and (min-height: 700px) {
+    // padding-bottom: 10vh;
+  }
+
+  h1 {
+    margin: 0 0 30px 4px;
+    color: var(--green);
+    font-family: var(--font-mono);
+    font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
+    font-weight: 400;
+    line-height: 1.1;
+    @media (max-width: 480px) {
+      margin: 0 0 20px 2px;
+      
+    }
+  }
+
+  h3 {
+    margin-top: 10px;
+    color: var(--slate);
+    line-height: 0.9;
+  }
+
+  p {
+    margin: 20px 0 0;
+    max-width: 540px;
+  }
+  body {
+    line-height: 1.5;
+    min-height: 100vh;
+    font-family: "Be Vietnam Pro", sans-serif;
+    background-color: var(--navy);
+    color: var(--c-text-primary);
+    display: flex;
+    padding-bottom: 3vw;
+    justify-content: center;
+  }
+  *,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+  .big-heading {
+    margin: 0;
+    font-size: clamp(40px,8vw,80px);
+    
+ }
+ .main{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  /* justify-content: center; */
+  -webkit-align-items: center;
+  /* -webkit-box-align: center; */
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 0;
+ }
+ a {
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
+  color: inherit;
+  position: relative;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+li a  {
+  
+    padding: 10px;
+}
+ul{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.a{
+  color: var(--green);
+  background-color: transparent;
+  border: 1px solid var(--green);
+  border-radius: var(--border-radius);
+  padding: 1.25rem 1.75rem;
+  font-size: var(--fz-sm);
+  font-family: var(--font-mono);
+  line-height: 1;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  margin-top: 50px;
+}
+.a:hover,a:active {
+  background-color: var(--green-tint);
+  outline: none;
+}
+
