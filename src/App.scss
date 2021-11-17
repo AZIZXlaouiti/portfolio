@@ -172,4 +172,13 @@ ul{
   background-color: var(--green-tint);
   outline: none;
 }
+ul::after{
+ 
+    content: '';
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0 auto;
+    background-color: var(--dark-navy);
+}
 
