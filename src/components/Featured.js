@@ -111,11 +111,17 @@ const StyledProject = styledComponents.li`
   }
 
   .project-overline {
-    margin: 10px 0;
-    color: var(--green);
-    font-family: var(--font-mono);
-    font-size: var(--fz-xs);
-    font-weight: 400;
+   
+    display: inline-block;
+    margin: 3px 3px 3px 0;
+    font-family: Inconsolata,monospace;
+    font-size: .75rem;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 3px;
+    color: #007bff;
+    border: 1px solid #007bff;
+    background: 0 0;
   }
 
   .project-title {
@@ -186,7 +192,7 @@ const StyledProject = styledComponents.li`
     flex-direction: row;
     li {
       margin: 0 20px 5px 0;
-      color: var(--light-slate);
+  
       font-family: var(--font-mono);
       font-size: var(--fz-xs);
       white-space: nowrap;
@@ -298,7 +304,6 @@ const Featured = () => {
  
 
   const pined =useSelector(state=> state.pins)
-  console.log(pined)
   return (
     <section id="projects">
     <h2 className="numbered-heading" >
@@ -314,19 +319,9 @@ const Featured = () => {
             <StyledProject >
               <div className="project-content">
                 <div>
-                  {node.technologie !== undefined?  <ul className="project-tech-list ">
-                  {node.technologie.map((tech)=>{
-                    return (
-
-                      <li className="project-overline">#{tech}</li>
-                    )
-                      
-                        }
-                  )}
-                    </ul>:null}
                 
-                {/* <p className="project-overline">#{node.language}</p> */}
-
+                <p className="project-overline">{node.language}</p>
+                   
                   <h3 className="project-title">
                     {node.repo}
                   </h3>
@@ -338,28 +333,37 @@ const Featured = () => {
                   >
                     <p>{node.description} </p>
                  </div>
-              
+                 {node.technologie !== undefined?  <ul className="project-tech-list ">
+              {node.technologie.map((tech)=>{
+                return (
+                  
+                  <li>{tech}</li>
+                  )
+                  
+                }
+                )}
+
+                </ul>:null}
+                   
 
                   <div className="project-links">
                     
-                      <a >
+                      <a href={node.link}>
                         
                         {icons[0].svg}
                       </a>
-                      <a >
+                      <a href={node.web?node.web:'#'}>
                         
                         {icons[6].svg}
                       </a>
-                   
+             
                    
                   </div>
                 </div>
               </div>
 
               <div className="project-image">
-                <a >
-                  <GatsbyImage  className="img" />
-                </a>
+              <img aria-hidden="true" data-placeholder-image="" decoding="async" src="https://user-images.githubusercontent.com/79036942/141841833-e8845f3a-dc2e-49ea-b8e4-a417c2b92b60.gif" alt=""/>
               </div>
             </StyledProject>
           );
