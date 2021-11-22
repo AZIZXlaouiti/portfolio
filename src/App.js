@@ -1,11 +1,14 @@
+import { useEffect } from 'react';
 import './App.scss';
 import { icons } from './assets/icons';
 import Bio from './components/Bio';
-const two = <h1 className="h1">Hi, my name is </h1> ;
-const three = <h2 className="big-heading">Mohamed Aziz Laouiti.</h2>;
+import Featured from './components/Featured';
+import { getCurrentPins } from './reducers/display';
+import { useDispatch } from 'react-redux';
+const one = <h1 className="h1">Hi, my name is </h1> ;
+const two = <h2 className="big-heading">Mohamed Aziz Laouiti.</h2>;
 const four = <h3 className="big-heading"></h3>;
 const five = (
-  <>
   
     <p>
 
@@ -14,11 +17,8 @@ const five = (
       Well versed in several programming languages such
       as javascript , ruby and python, 
       with a constant drive for self-development, and learning
-      new technologies and languages
-    
-      .
+      new technologies and languages.
     </p>
-  </>
 );
 const six = (
   <div className="a">
@@ -31,11 +31,15 @@ const six = (
   </a>
 </div>
 );
-const one = <></>
+const three =<h3 className="big-heading">"react js enthusiast | rubyist | Software Engineering Student @ Flatiron School"</h3>;
+
 {/* <img src="https://user-images.githubusercontent.com/79036942/142129514-ce562c02-bca1-4e2a-b19c-266942493c8d.png"/> */}
 const items = [one, two, three, four, five, six];
-
 function App() {
+  const dispatch = useDispatch()
+  useEffect(()=>{
+    dispatch(getCurrentPins())
+  },[])
   return (
 
     <>
@@ -45,6 +49,7 @@ function App() {
             ))}
         </div>
         <Bio/>
+        <Featured/>
         <div className="container">
           <ul className="ul">
             <li><a>{icons[0].svg}</a></li>

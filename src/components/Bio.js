@@ -1,6 +1,21 @@
 import React from 'react'
 import styledComponents from 'styled-components';
+import { StaticImage } from 'gatsby-plugin-image';
+
 const Bio = () => {
+    const StyledAboutSection = styledComponents.section`
+  max-width: 900px;
+
+  .inner {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-gap: 50px;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+`;
     const StyledText = styledComponents.div`
   ul.skills-list {
     display: grid;
@@ -39,7 +54,6 @@ max-width: 300px;
 }
 
 .wrapper {
-  ${({ theme }) => theme.mixins.boxShadow};
   display: block;
   position: relative;
   width: 100%;
@@ -96,12 +110,12 @@ max-width: 300px;
   }
 }
 `;
-  const skills = ['JavaScript (ES6+)', 'TypeScript', 'React', 'Ruby', 'Ruby on Rails', 'python' , 'PostgreSQL','SQLite','Heroku','WebSocket','redis','activeRecord','ExpressJs','NodeJs'];
+  const skills = ['JavaScript (ES6+)', 'TypeScript', 'React','redux', 'Ruby', 'Ruby on Rails', 'python' , 'PostgreSQL','SQLite','Heroku','WebSocket','redis','activeRecord','ExpressJs','NodeJs','Test-Driven Development'];
 
     return (
-        <section id="about">
+        <StyledAboutSection id="about">
       <h2 className="numbered-heading">About Me</h2>
-
+      <div className="inner">
         <StyledText>
           <div>
             <p>
@@ -129,19 +143,23 @@ max-width: 300px;
             {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
           </ul>
         </StyledText>
-
     
-          {/* <div className="pic">
-            <img
+    
+        <StyledPic>
+          <div className="wrapper">
+            <StaticImage
               className="img"
-              src="../../images/me.jpg"
+              src="https://user-images.githubusercontent.com/79036942/142129514-ce562c02-bca1-4e2a-b19c-266942493c8d.png"
               width={500}
               quality={95}
               formats={['AUTO', 'WEBP', 'AVIF']}
               alt="Headshot"
             />
-          </div> */}
-        </section>
+          </div>
+        </StyledPic>
+        </div>
+    </StyledAboutSection>
+
     )
 }
 
