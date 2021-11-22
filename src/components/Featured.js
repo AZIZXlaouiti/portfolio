@@ -241,7 +241,6 @@ const StyledProject = styledComponents.li`
   .project-image {
     grid-column: 6 / -1;
     grid-row: 1 / -1;
-    position: relative;
     z-index: 1;
 
     @media (max-width: 768px) {

@@ -5,6 +5,7 @@ import Bio from './components/Bio';
 import Featured from './components/Featured';
 import { getCurrentPins } from './reducers/display';
 import { useDispatch } from 'react-redux';
+import resume from "./assets/resume.pdf"
 const one = <h1 className="h1">Hi, my name is </h1> ;
 const two = <h2 className="big-heading">Mohamed Aziz Laouiti.</h2>;
 const four = <h3 className="big-heading"></h3>;
@@ -52,12 +53,15 @@ function App() {
         <Featured/>
         <div className="container">
           <ul className="ul">
-            <li><a>{icons[0].svg}</a></li>
-            <li><a>{icons[1].svg}</a></li>
-            <li><a>{icons[3].svg}</a></li>
-            <li><a>{icons[2].svg}</a></li>
-            <li><a>{icons[5].svg}</a></li>
-            
+            <li><a href='https://github.com/AZIZXlaouiti'>{icons[0].svg}github</a></li>
+            <li><a href='https://www.linkedin.com/in/mohamed-aziz-laouiti/'>{icons[1].svg}linkedin</a></li>
+            <li><a href='mailto:azizrocke@gmail.com'>{icons[3].svg}email</a></li>
+            <li><a href='https://mohamed-aziz-laouiti.medium.com/'>{icons[2].svg}blog</a></li>
+            <li>
+            <a href={resume} target="_blank" rel="noopener noreferrer">
+      {icons[5].svg}Resume
+    </a>
+    </li>
           </ul>
         </div>
     </>
